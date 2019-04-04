@@ -6,6 +6,34 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "quiz"
+    label: "Quiz"
+    folder: "src/pages/quiz"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Questions",
+          name: "questions",
+          widget: "list",
+          default: "questions",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: Blurbs,
+          name: blurbs,
+          widget: list,
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: Text, name: text, widget: text },
+            ],
+        },
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
