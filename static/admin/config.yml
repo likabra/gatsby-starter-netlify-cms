@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "quiz"
     label: "Quiz"
-    folder: "src/pages/quiz"
+    folder: "src/pages/page"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
