@@ -9,6 +9,7 @@ const Testimonials = ({ testimonials }) => (
         <div className="message-body">
           {testimonial.quote}
           <br />
+          <div>Hepp!</div>
           <cite> – {testimonial.author}</cite>
         </div>
       </article>
